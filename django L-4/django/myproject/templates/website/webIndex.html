@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+home page 
+{% endblock %}
+
+{% block contect %}
+<h2>chai and code</h2>
+{% endblock %}
+
+{% comment %} {% load static %} {% endcomment %}
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web template</title>
+    <!-- <link rel="stylesheet" href="../../static/style.css">  ---- not work--> 
+     <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h2> template website webIndex </h2>
+    
+</body>
+</html> {% endcomment %}

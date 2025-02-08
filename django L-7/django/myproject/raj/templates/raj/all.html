@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+raj page 
+{% endblock %}
+
+{% block contect %}
+<h2>chai and raj</h2>
+<div class="grid grid-cols-3 gap-4 m-3 ">
+{% for data1 in fetch_data_to_backend %}
+  <div class=" bg-blue-800 p-5" > 
+     <img  class="rounded shadow-lg " src="{{data1.image.url}}" alt="">
+     <h2 class="text-2xl font-bold" > {{data1.name}} </h2>
+    <a href="{% url 'raj_detail' data1.id %}">
+        <button type="button" class="bg-red-300 bottom-2" >
+            {{data1.type}} - {{data1.id}}
+        </button>
+    </a>
+  </div>
+
+  
+{% endfor %} 
+</div>
+{% endblock %}
+
+
+{% comment %} #for loop {% endcomment %}
+{% comment %} // it not work this place  {% endcomment %}
+{% comment %} {% for data1 in fetch_data_to_backend %}
+  <div class="test1" > 
+     <img src="{{data1.image.url}}" alt="">
+     test
+  </div>
+{% {% endfor %} %} {% endcomment %}
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> raj template raj html </h1>
+</body>
+</html> {% endcomment %}
